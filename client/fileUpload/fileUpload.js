@@ -80,9 +80,7 @@
 
 
 Template.fileUpload.events({
-  // 'submit':function(event){
-    //var $this = $(event.target);
-    'submit': function(event, template) {
+  'submit': function(event, template) {
 
     var title = event.target.title.value;
     var loc = event.target.location.value;
@@ -94,9 +92,8 @@ Template.fileUpload.events({
     var txtdesc = event.target.description.value;
     // //var count = 0; 
     // //count++;
-    alert(title,loc,price,roomtype,sqft,category,txtdesc);
+    //alert(title,loc,price,roomtype,sqft,category,txtdesc);
     // //Meteor.call("insert",title,loc,price,roomtype,sqft,category,txtdesc);
-    
     bannerdb.insert({
         title: title,
         location : loc,
@@ -108,31 +105,14 @@ Template.fileUpload.events({
         uploadedAt: new Date().toLocaleString()
       
     });
-
-    // Toast.info("Data insert successfully");
-    //FS.Utility.eachFile(event, function(file) {
-    Images.insert(file, function (err, fileObj) {     
-        if (err){
-          // handle error
-        } else {
-          //var userId = Meteor.userId();
-          //var loc = event.target.location.value;
-          var imagesURL = {
-            'fileUpload.image': '/cfs/files/images0/' + fileObj._id
-          };
-          Meteor.users.insert(file, {$set: Template});
-        }
-      });
-    //});
+    Toast.info("Data insert successfully");
   }
 });
+
 Template.fileUpload.helpers({
   'bannercontent':function(){
     var banner_content =  bannerdb.find({},{sort:{uploadedAt:-1},limit:1});
     return banner_content;
-  },
-  images: function () {
-    return Images.find(); 
   }
 });
 
@@ -162,34 +142,24 @@ Template.fileUpload.onCreated(function(){
         //return category;        
     }*/
 
-
-
-
-
-
-
-
 Template.fileUpload1.events({
- 'change .myFileInput': function(event, template) {
+ 'change.uploadFile': function(event, template) {
     FS.Utility.eachFile(event, function(file) {
-
       Images.insert(file, function (err, fileObj) {     
         if (err){
-          // handle error
+            alert("Image not upload..");
         } else {
-          //var userId = Meteor.userId();
-          //var loc = event.target.location.value;
           var imagesURL = {
             'fileUpload1.image': '/cfs/files/images0/' + fileObj._id
           };
-          Meteor.users.insert(file, {$set: Template});
+          Meteor.users.insert(file, {$set: imagesURL});
         }
       });
     });
   }
 });
 
-imagesURL.fileUpload.onCreated(function(){
+Template.fileUpload1.onCreated(function(){
   var self= this;
   this.autorun( function() {
     self.subscribe('images0');
@@ -201,4 +171,3 @@ Template.fileUpload1.helpers({
     return Images.find(); 
   }
 });
-
