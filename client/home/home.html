@@ -1,0 +1,147 @@
+
+<template name="home">
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <center><img src="/images/navi5.jpg" alt="Chania" width="1000" height="400">
+        <div class="carousel-caption">
+          
+        </div></center>
+      </div>
+
+      <div class="item">
+       <center> <img src="/images/navi6.jpg" alt="Chania" width="1000" height="400">
+        <div class="carousel-caption">
+          
+        </div></center>
+      </div>
+    
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!-- End of Coraousel Effect -->
+<!-- Start of Search UI -->
+<div class="container-fluid" style="margin:20px 100px 0px 100px;">
+  <form role="form">
+    <fieldset>
+      <a href="#" class="btn btn-primary" role="button">Residential</a>
+      <a href="#" class="btn btn-primary" role="button" style="margin-left: -2px;">Commercial</a>
+                   
+      <div class="panel panel-primary">      
+        <div class="panel-body">
+          <div class="row" style="">
+            <div class="form-group">
+              
+              <div class="radio">
+                <label>
+                  <span style="margin-left:15px;font-size: 15px;">
+                    <input type="radio" name="optradio" value="rent" id="optradio_rent">Rent
+                  </span>
+                </label>
+              </div>
+              <div class="radio">
+                  <label><span style="margin-left:15px;font-size: 15px;">
+                  <input type="radio" name="optradio" value="buy" id="optradio_buy">Buy</span></label>
+              </div>
+        
+              <div class="col-sm-2">
+                <label class="sr-only" for="Area"></label>
+                <select class="form-control" id="area_wise_filter">
+                  <option disabled="disabled" selected="selected">Area</option>
+                    {{#each areas}}
+                      <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                  <!--<option>Area</option>
+                  <option>Navi Mumbai</option>
+                  <option>Khopoli</option>-->
+                </select>
+              </div>
+            
+              <div class="col-sm-2">
+                <label class="sr-only" for="Room Type"></label>
+                <select class="form-control" id="room_type_filter">
+                  <option>Type</option>
+                    {{#each room_type}}
+                      <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                  <!--<option>1 RK</option>
+                  <option>1 BHK</option>
+                  <option>2 BHK</option>
+                  <option>3 BHK</option>-->
+                </select>
+              </div>
+
+
+              <div class="col-sm-2">
+                <label class="sr-only" for="Area"></label>
+                <select class="form-control">
+                  <option>Price From</option>
+                  <!--<option>1 lac</option>-->
+                  {{#if rentbuy}}
+                    {{#each rpriceFrom}}
+                      <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                  {{else}}
+                    {{#each bpriceFrom}}
+                      <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                  {{/if}}
+                </select>
+              </div>
+
+              <div class="col-sm-2">
+                <label class="sr-only" for="Area"></label>
+                <select class="form-control">
+                  <option>Price To</option>
+                  <!--{{#if rpriceTo}}-->
+                    {{#each rpriceTo}}
+                      <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                  <!--{{/if}}-->
+                  <!--<option>1 cr</option>-->
+                </select>                  
+              </div>
+              <div class="col-sm-2 col-md-offset-2">
+                <label class="sr-only" for="search"></label>
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </fieldset> 
+</form>  
+</div>    
+<!-- End of Search ui -->
+<div id="bussiness" style="margin-bottom:200px;height: auto;width: 100%;">
+    <ul id="imgdesc" style="list-style-type: none;margin:0px 20px;padding:0px 0px 0px 20px;">
+      {{#each bannercontent}}        
+        {{> banner}}
+      {{/each}}
+    </ul>
+</div>
+{{> ads}}
+</template>

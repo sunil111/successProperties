@@ -1,0 +1,24 @@
+/*css-footer*/
+
+.footer{
+    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /*background-color: rgba(153, 255, 153,0.8);*/
+}
+nav#footernav{
+        margin-left: -5px;
+        /*margin-bottom:-20px;*/
+        width:100%;
+        height:30px;
+        text-align:center;
+        padding:3px;
+        color: white;
+        background-color: #104E8B;
+        font-family: "Times New Roman", Times, serif;
+	    font-size:15px;
+        /*margin-top:10%;*/
+        /*border: 1px solid yellow;
+        border-radius: 5px;*/
+    }
