@@ -143,20 +143,35 @@ Template.fileUpload.onCreated(function(){
     }*/
 
 Template.fileUpload1.events({
- 'change.uploadFile': function(event, template) {
-    FS.Utility.eachFile(event, function(file) {
-      Images.insert(file, function (err, fileObj) {     
-        if (err){
-            alert("Image not upload..");
-        } else {
-          var imagesURL = {
-            'fileUpload1.image': '/cfs/files/images0/' + fileObj._id
-          };
-          Meteor.users.insert(file, {$set: imagesURL});
-        }
-      });
-    });
-  }
+ // 'change.uploadFile': function(event, template) {
+ //    FS.Utility.eachFile(event, function(file) {
+ //      Images.insert(file, function (err, fileObj) {     
+ //        if (err){
+ //            alert("Image not upload..");
+ //        } else {
+ //          var imagesURL = {
+ //            'fileUpload1.image': '/cfs/files/images0/' + fileObj._id
+ //          };
+ //          Meteor.users.insert(file, {$set: imagesURL});
+ //        }
+ //      });
+ //    });
+ //  }
+
+ 'click .submitFile':function(event){
+    // alert("working.....");
+    // var file = $('#myFileInput').get(0).files[0];
+    // var fsFile = new FS.File(file);
+    // alert(fsFile);
+    // Images.insert(fsFile,function(err,result){
+    //   if(!err){
+    //     console.log("New images inserted")
+    //   }
+    // });
+    var files = $("input.myFileInput")[0].files;
+    alert(files);
+    Images.insert(files,'/cfs/files/images0/');
+ }
 });
 
 Template.fileUpload1.onCreated(function(){
@@ -167,6 +182,12 @@ Template.fileUpload1.onCreated(function(){
 });
 
 Template.fileUpload1.helpers({
+  images: function () {
+    return Images.find(); 
+  }
+});
+
+Template.fileUploadRow.helpers({
   images: function () {
     return Images.find(); 
   }

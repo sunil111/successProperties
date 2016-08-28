@@ -65,7 +65,7 @@
         <div style="border:1px solid black;height:80px;width:25px;position:absolute;right:0px;top:50px;word-wrap:break-word;padding-left:5px;background-color:#104E8B;color:white;font-weight:bolder;box-shadow:-3px -3px 5px gray;letter-spacing:10px;">{{category}}</div>
       <!--{{/if}}-->
       <ul id="container_desc_root_ul" style="list-style-type: none;padding: 0;margin: 5px;">
-        <li style="margin-top: 5px;">
+        <!-- <li style="margin-top: 5px;">
           <span style="font-weight: bold;color:#104E8B;font-size: 20px;">{{title}}</span>
         </li>
         <li style="margin-top: 5px;">
@@ -87,7 +87,26 @@
         <li style="margin-top: 5px;">
             <span style="font-weight: bold;color:gray;font-size: 16px;">Description :</span>
             <span>{{description}}</span>
+        </li> -->
+        <li style="margin-top: 5px;">
+          <span id="title" style="font-weight: bold;color:#104E8B;font-size: 20px;">{{title}}</span>
         </li>
+        <li style="margin-top: 5px;">
+          <span style="font-weight: bold;color:gray;font-size: 16px;">Location : <span id="location" style="font-size: 16px;" title="{{location}}">{{location}}</span></span>
+        </li>
+        <li style="margin-top: 5px;">
+          <span style="font-weight: bold;color:gray;font-size: 16px;">Price : <span id="price" style="font-size: 16px;" title="{{price}}"> {{price}}</span></span>
+        </li>
+        <li style="margin-top: 5px;">
+          <span style="font-weight: bold;color:gray;font-size: 16px;">Rooms : <span id="rooms" style="font-size: 16px;" title="{{rooms}}"> {{rooms}}</span></span>
+        </li>
+        <li style="margin-top: 5px;">
+          <span style="font-weight: bold;color:gray;font-size: 16px;">Sq/Fts : <span id="sq_ft" style="font-size: 16px;" title="{{sq_ft}}"> {{sq_ft}}</span></span>
+        </li>
+        <li style="margin-top: 5px;">
+          <span style="font-weight: bold;color:gray;font-size: 16px;">Description : <span id="description" style="font-size: 16px;" title="{{description}}"> {{description}}</span></span>
+        </li>
+
         {{#if currentUser}}
         <div id="update_delete_option" style="margin-top: 5px;position:absolute;bottom:1px;left:1px;width:100px;height: 30px;padding-left:20px;">
             <span class="glyphicon glyphicon-remove"></span>

@@ -32,3 +32,7 @@ cfs:filesystem
 accounts-password
 dburles:google-maps
 session
+
+
+
+cfs:ejson-file
