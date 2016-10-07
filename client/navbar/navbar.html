@@ -1,0 +1,72 @@
+<template name="mainNav">
+
+<nav role="navigation" class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <div>
+          <img src="/images/logo_success_property.jpg" class="logo">
+        </div>
+      </a>
+    </div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+
+          <li class="home_ref Nav_list">
+            <a href="/" id="home_ref" class=" Nav_Menu" style="text-decoration: none; color: #000000;">Home</a>
+          </li>
+
+          <li class="Nav_list">
+            <a href="/about_us" id="about_ref" class=" Nav_Menu" style="text-decoration: none;color: #000000;">About Us</a>
+          </li>
+
+          <li class="Nav_list dropdown">
+            <a class="dropbtn Nav_Menu" style="text-decoration: none;color: #000000;">Services <span class="caret"></span></a>
+              <div class="dropdown-content">
+                <a class="contentMenu1" href="/rent" id="rent_ref">Rent</a>
+                <a class="contentMenu2" href="/buy" id="buy_rent">Buy</a>
+              </div>
+          </li>
+
+          <li class="Nav_list">
+            <a href="/new_construction" id="new_construction_ref" class=" Nav_Menu" style="text-decoration: none;color: #000000;">New Contruction</a>
+          </li>
+                      
+          <li class="Nav_list">
+            <a href="/builder_gallery" id="contact_us_ref" class=" Nav_Menu" style="text-decoration: none;color: #000000;">Builder Gallery</a>
+          </li>
+                      
+          <li class="Nav_list">
+            <a href="/contact" id="contact_us_ref" class=" Nav_Menu" style="text-decoration: none;color: #000000;">Contact us</a>
+          </li>
+                      
+          {{#if currentUser}}
+            <li class="Nav_list">
+              <a href="/fileUpload" class=" Nav_Menu" style="text-decoration: none;color: #000000;">File Upload</a>
+            </li>
+          {{/if}}
+
+          <li class="Nav_login">
+            <a class=" Nav_Menu" style="text-decoration: none;color: #000000;">
+              <i class="fa fa-user fa-lg"></i> {{> loginButtons align="right"}}
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  {{>yield}}
+  {{>footer}}
+        
+</template>
+
+
+

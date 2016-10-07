@@ -1,0 +1,75 @@
+<template name="buy">
+
+	{{> search_ui}}
+	<hr>
+
+	<!--{{> buy_properties}}-->
+
+	<div id="bussiness" style="margin-bottom:200px;height: auto;width: 100%;">
+	    <ul id="imgdesc" style="list-style-type: none;">
+	      {{#each bannercontent}}
+	        {{> banner}}
+	      {{/each}}
+	    </ul>
+	</div>
+	
+	{{> ads}}
+</template>
+
+<template name="search_ui">
+<div class="container-fluid" style="margin:20px 100px 0px 100px;">
+	<form role="form">
+	<fieldset>
+		<legend>{{buy_helper}}</legend>
+	    <div class="row" style="">
+	    <div class="form-group">
+		    <div class="col-sm-2">
+		    	<label class="sr-only" for="Area"></label>
+		    	<select class="form-control">
+		    		<option>Area</option>
+					<option>Navi Mumbai</option>
+					<option>Khopoli</option>
+				</select>
+		    </div>
+		    <div class="col-sm-2">
+		    	<label class="sr-only" for="Property Type"></label>
+		    	<select class="form-control">
+					<option>All</option>
+					<option>Commercial</option>
+					<option>Residential</option>
+				</select>
+		    </div>
+		    <div class="col-sm-2">
+		    	<label class="sr-only" for="Room Type"></label>
+		    	<select class="form-control">
+					<option>1 Rk</option>
+					<option>2 BHK</option>
+					<option>3 BHK</option>
+				</select>
+		    </div>
+		    <div class="col-sm-2">
+	          	<label class="sr-only" for="Area"></label>
+	          	<select class="form-control">
+		            <option>Price From</option>
+		            <option>1 Lac</option>
+	        	</select>
+        	</div>
+
+        	<div class="col-sm-2">
+		        <label class="sr-only" for="Area"></label>
+		        <select class="form-control">
+		        	<option>Price To</option>
+		        	<option>50 Lac</option>
+		        </select>
+	        </div>        
+			<div class="col-sm-2">
+				<label class="sr-only" for="search"></label>
+				<button type="button" class="btn btn-primary">Search</button>
+			</div>
+	
+		</div>
+		</div>
+	</fieldset>	
+	</form> 	
+</div>
+</template>

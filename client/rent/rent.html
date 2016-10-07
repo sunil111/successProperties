@@ -1,0 +1,16 @@
+<template name="rent">
+	{{> search_ui}}
+	<hr>
+	<div id="bussiness" style="margin-bottom:200px;height: auto;width: 100%;">
+    	<ul id="imgdesc" style="list-style-type: none;">
+      		{{#each bannercontent}}
+        		{{> banner}}
+      		{{/each}}
+
+    	</ul>
+
+	</div>
+	{{> ads}}
+	<!--{{> buy_properties}}-->
+
+</template>

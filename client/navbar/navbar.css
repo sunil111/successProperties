@@ -1,0 +1,126 @@
+.navbar{
+	background-color: #F39C12;
+	height: 66px;
+	border-bottom: 2px solid #ffffff;
+	opacity: 1;
+}
+
+.logo{
+	height: 66px;
+	width: 150px;
+	box-shadow:0px 0px 70px 0px #ffffff;
+}
+
+.navbar-brand{
+	padding-top: 0px;
+	padding-left: 0px;
+}
+
+.icon-bar{
+	padding-top: 5px;
+	background-color: #000000;
+}
+
+.navbar-toggle{
+	border-color: #000000;
+}
+
+.Nav_Menu{
+	color: #000000;
+	font-family: open sans;
+	font-size:16px;
+	font-weight:500;
+}
+
+.Nav_Menu:hover{
+	color:#000000;
+}
+
+.Nav_list{
+	display: inline-block;
+	position: relative;
+	padding-top: 8px;
+	padding-bottom: 6px; 
+	padding-right:6px; 
+	padding-left:6px;
+    -o-transition:0.3s ease;
+    -ms-transition:0.3s ease;
+    -moz-transition:0.3s ease;
+    -webkit-transition:0.3s ease;
+    transition:0.3s ease;
+    white-space:nowrap;
+}
+
+.Nav_list:after{
+	content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;  /*#F22613;*/
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.Nav_list:hover:after{
+    width: 100%;
+}
+
+.Nav_list:hover{
+	background-color: #ffffff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    font-family: open sans;
+	font-size:16px;
+	font-weight:500;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 8px;
+    margin-left: -6px;
+}
+
+.dropdown-content a {
+    color: #000000;
+    padding: 18px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+	background-color: #F39C12;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.Nav_login{
+	display: inline-block;
+	padding-top: 8px;
+	padding-bottom: 6px; 
+	padding-right:6px; 
+	padding-left:6px;
+}
+
+.login-button{
+	margin-top: 0px;
+}
+
+.login-link-text{
+	color: #000000;
+	text-decoration: none;
+	font-family: open sans;
+	font-size:16px;
+	font-weight:500;
+}
+
+.accounts-dialog{
+	margin-top: 40px;
+	background-color: #F39C12;
+	color: #000000;
+}

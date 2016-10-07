@@ -1,0 +1,202 @@
+<template name="fileUpload">
+
+<div id="fileupload_preview" style="padding:0px 0px 0px 350px;height: auto;width: 100%;">
+    <ul id="imgdesc" style="list-style-type: none;margin:0px;padding:0px 0px 0px 20px;">
+      {{#each bannercontent}}
+        {{> banner}}
+      {{/each}}
+    </ul>
+</div>
+
+<div class="container-fluid" style="margin:20px 100px 20px 100px;padding:30px;border:1px solid black;">
+<form class="update_details">
+	<legend>
+		<h3>Add Description Details:</h3>
+	</legend>
+	<div class="row">
+		<div class="col-sm-3 form-group">
+            <input class="form-control" id="input_title" name="title" placeholder="Title" type="text" required>
+        </div>
+        <div class="col-sm-3 form-group">
+        	<input class="form-control" id="input_location" name="location" placeholder="location" type="text" required>
+        </div>
+        <div class="col-sm-3 form-group">
+        	<div class="input-group">
+        		<div class="input-group-addon">
+        			<i class="fa fa-rupee"></i>
+        		</div>
+            	<input class="form-control" id="input_price" name="price" placeholder="price" type="text" pattern="\d+" title = "Enter Only numbers" required>
+            	<div class="input-group-addon">
+					<select class="forn-control" id="select_price">
+						<option>K</option>
+						<option>Lac</option>
+						<option>Cr</option>						
+					</select>		        	
+		        </div>
+            </div>
+        </div>
+        <div class="col-sm-3 form-group">
+        	<div class="input-group">
+		        <input class="form-control" id="input_rooms" name="rooms" placeholder="room type" type="text" >
+		        <div class="input-group-addon">
+					<select class="forn-control" id="select_room">
+						<option>RK</option>
+						<option>BHK</option>
+						
+					</select>		        	
+		        </div>
+            </div>
+        </div>
+        <div class="col-sm-3 form-group">
+        	<div class="input-group">
+        		
+            	<input class="form-control" id="input_sq_ft" name="sq_ft" placeholder="Only Numbers" type="text" pattern="\d+" title = "Enter Only numbers" required>
+            	<div class="input-group-addon" id="sq_ft_content">sq/ft</div>
+            </div>
+    	</div>
+          <!--<div class="col-sm-3 form-group">
+            <input class="form-control" id="input_rent_buy" name="rentbuy" placeholder="Rent or Buy" type="text">
+          </div>-->
+        <div class="col-sm-3">
+            <label class="sr-only" for="property_category"></label>    
+            <select class="form-control" id="option_buy_rent">
+                <option>RENT</option>
+                <option>BUY</option>	                
+            </select>
+       	</div>
+
+        <div class="col-sm-3">
+            <label class="sr-only" for="property_category"></label>    
+            <select class="form-control" id="option_resi_commercial">
+                <option>Residential</option>
+                <option>Commercial</option>	                
+            </select>
+       	</div>
+
+        <div class="col-sm-3 form-group">
+          	<textarea class="form-control" id="txtarea_description" name="description" placeholder="description"  maxlength="104" rows="2"></textarea>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-sm-2 form-group">
+    		<button class="btn btn-primary" type="submit">Preview</button>
+    	</div>
+    </div>
+        
+</form>
+</div>
+<!--<div class="container-fluid" style="margin:20px 100px 0px 100px;">
+	<form role="form">
+	<fieldset>
+		<legend>Flie Upload Option</legend>
+	    <div class="row" style="">
+	    	<div class="form-group">
+		 		<div class="col-md-12">
+		    		<label class="sr-only" for="inputfileupload"></label>
+		    		<input type="file" id="input_file" multiple>
+		    	</div>
+			</div>
+			<br>
+			<div>
+				<div class="col-sm-2">
+					<label class="sr-only" for="preview"></label>
+					<input type="button" value="Preview">
+				</div>
+			</div>	
+		</div>
+	</fieldset>
+	</form>
+</div>
+-->
+
+<div style="margin: 10px 0px;"></div>
+	<div class="container" style="margin-bottom: 100px;border:1px solid black;">
+		{{> fileUpload1}}
+	</div>
+
+{{> ads}}
+</template>
+
+
+<template name="fileUpload1">
+	<form class="well">
+		<legend>
+			<h3>File Upload</h3>
+		</legend>
+<!-- 		<input class="myFileInput" type="file" multiple>
+		<input class="submitFile" type="submit" value="Upload"> -->
+		
+<!-- 		  <div class="well">
+		    <input class="myFileInput" type="file" multiple>
+		  </div> -->
+
+		  <div class="well">
+		     {{> uploadForm}}
+  			{{> uploadedFiles}}
+		  </div>
+
+		<table class="table" border="1px">
+			<thead>
+				<th>Name</th>
+				<th>Size</th>
+				<th style="width: 150px;">Upload Progress</th>
+				<th style="width: 300px;">Status</th>
+			</thead>
+			<!--<tbody>
+				{{#each files}}
+					{{> fileUploadRow}}
+				{{else}}
+					<tr>
+						<td><h5>No files selected</h5></td>
+					</tr>
+				{{/each}}
+			</tbody>-->
+		</table>
+	</form>
+</template>
+
+<template name="fileUploadRow">
+	<tr>
+		<td>{{name}}</td>
+		<td>{{size}}</td>
+		<td>
+			<div class="progress progress-striped {{uploadCompleteClass}}">
+				<div class="bar" style="width: {{uploadProgress}}%">
+					<span style="padding: 2px;float: left;color: #000;">
+						{{uploadProgress}}%
+					</span>
+				</div>
+			</div>
+		</td>
+		<td>{{status}}</td>
+	</tr>
+</template>
+
+
+
+<template name="uploadForm">
+<!-- 	<button id="myDemo"> Demo</button> -->
+
+  {{#with currentUpload}}
+    Uploading <b>{{file.name}}</b>: 
+    <span id="progress">{{progress.get}}%</span>
+  {{else}}
+    <input id="fileInput" type="file" multiple/>
+    <p><small>Upload file in <code>jpeg</code> or <code>png</code> format, with size less or equal to 10MB</small></p>
+  {{/with}}
+</template>
+
+<template name="uploadedFiles">
+  {{#if uploadedFiles.count}}
+    <ul>
+      {{#each file in uploadedFiles.each}}
+        <li>
+        	<img id="imgLoad" src="{{file.link}}" class="img-rounded" alt="Cinque Terre" width="100" height="100">
+          	<a href="{{file.link}}?download=true" download="{{file.name}}">{{file.name}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <div>No files uploaded, yet</div>
+  {{/if}}
+</template>
