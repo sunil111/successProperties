@@ -33,6 +33,7 @@ email@1.0.15
 es5-shim@4.5.13
 fastclick@1.0.12
 fortawesome:fontawesome@4.5.0
+fourseven:scss@3.8.1
 geojson-utils@1.0.9
 hot-code-push@1.0.4
 html-tools@1.0.10
@@ -82,7 +83,9 @@ reactive-dict@1.1.8
 reactive-var@1.0.10
 reload@1.1.10
 retry@1.0.8
+richsilv:owl-carousel@0.1.0
 routepolicy@1.0.11
+seba:minifiers-autoprefixer@1.0.1
 service-configuration@1.0.10
 session@1.1.6
 sha@1.0.8
@@ -90,7 +93,6 @@ smeevil:session-store@1.0.0
 spacebars@1.0.12
 spacebars-compiler@1.0.12
 srp@1.0.9
-standard-minifier-css@1.0.8
 standard-minifier-js@1.0.8
 templating@1.1.13
 templating-tools@1.0.4

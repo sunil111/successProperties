@@ -1,16 +1,23 @@
 body {
-    padding-top: 80px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 66px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s; 
+    -webkit-animation: fadeIn 2s; 
+    -o-animation: fadeIn 2s; 
 }
 
-
+/*
 #myCarousel_home{	
-	margin-left: 0px;
-	padding: 0px;
+  margin: -20px -15px 0px -15px;
+  padding: 0px;
+  height: 455px;
+  transition: height 3s;
 }
 #img1_home , #img2_home{
-	width: 100%;
-	height: 255px;
-	border-radius: 0px;
+  width: 100%;
+  height: 455px;
+  border-radius: 0px;
+  transition: height 3s;
 }
 #myCarousel_home>.carousel-fade #myCarousel_home>.carousel-inner #myCarousel_home>.item {
   opacity: 0;
@@ -39,4 +46,85 @@ body {
 }
 #myCarousel_home>.carousel-fade #myCarousel_home>.carousel-control {
   z-index: 2;
+}
+*/
+
+
+
+.btns{
+  position: relative;
+  background-color: #000000;
+  height: 470px;
+  transition: height 3s;
+}
+
+#owl-demo {
+  display: block;
+  width: 100%!important;
+  height: 460px!important;
+  margin: 0px 0px 0px 0px;
+/*  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;*/
+  transition: height 3s;
+}
+
+
+/*#owl-demo{
+  padding-top: 5px;
+}*/
+
+.item{
+  display: block;
+  width: 100%!important;
+  height: 469px!important;
+  margin: 0px 0px 0px 0px;
+/*  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;*/
+  transition: height 3s;
+}
+
+.prevbtn{
+  position: absolute;
+  top: 200px;
+  left: 16px;
+  z-index: 10!important;
+  transition:2s;
+}
+
+.nextbtn{
+  position: absolute;
+  top: 200px;
+  right: 16px;
+  z-index: 10!important;
+  transition:2s;
+}
+
+.btnSet{
+  width: 60px;
+  height: 60px;
+  padding: 10px 0px;
+  font-size: 25px;
+  border-radius: 35px;
+  background-color: #000000;
+  opacity: 0.5;
+  color: #ffffff;
+}
+
+.btnSet:hover{
+  background-color: transparent;
+  opacity: 0.8;
+  color: #000000;
+/*  transform: rotate(1080deg);*/
+}
+
+.owl-dots{
+  margin-top: -40px!important;
+  z-index: 10!important;
+  /*top: 90%;*/
+  opacity: 0.5;
+  display: block;
 }

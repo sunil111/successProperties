@@ -12,7 +12,7 @@ reactive-var            # Reactive variable for tracker
 jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
 
-standard-minifier-css   # CSS minifier run for production mode
+#standard-minifier-css   # CSS minifier run for production mode
 standard-minifier-js    # JS minifier run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
@@ -37,15 +37,13 @@ accounts-password
 mpowaga:jquery-fileupload
 dburles:google-maps
 
+
+
+
+
 #session
+
 fortawesome:fontawesome
-
-#jcheroske:less-responsive
-#jcheroske:responsive-media-queries
-#nerdmed:mediaqueries
-
-#ficshelf:media-query
-#less
 
 #cfs:standard-packages
 #cfs:gridfs
@@ -53,9 +51,15 @@ fortawesome:fontawesome
 #cfs:ui
 #raix:ui-dropped-event
 
+
+
+
 ostrio:files
 ostrio:templatehelpers
 
-#msavin:mongol
-
 smeevil:session-store
+
+fourseven:scss@3.8.0_1
+seba:minifiers-autoprefixer
+
+richsilv:owl-carousel

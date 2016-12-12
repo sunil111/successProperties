@@ -1,32 +1,30 @@
 <template name="about_us">
 
-<div class="container-fluid" >
-	<img id="about_us" class="img-responsive" src="" alt="About us">
-	
-	<div class="container-fluid" style="border:1px solid blue;box-shadow:5px 5px 5px gray;margin-left:60px;margin-right:60px;">
-	<h2 class="text-center" style="background-color:#B7C3D0;">
-		<span id="content_title">About Us</span>
-		<!--<button type="button" class="btn btn-primary btn-lg" style="font-size: 20px">About Us</button>-->    <!-- Vipuls code -->	
-	</h2>
-	<div class="container-fluid" style="height: 100px;width: 100%;">
-		<p id="about_us_para1" style="font-size: 20px;">
-			Welcome to Success Property Consultants is a real estate investment firm specializing in purchasing, selling, and leasing residential and commercial properties. We evaluate the market, rental potential, and ROI (return on investment) before entering into a sales contract.
-		</p>
+	<div class="container-fluid about_usPage">
+	<!-- 	<img id="about_us" class="img-responsive" src="" alt="About us"> -->
+		<div class="container-fluid aboutPage ">
+			<h2 class="abtLine">
+<!-- 				<span id="content_titleAbout">About Us</span> -->
+				<span class="ribbon abtRibbon">About Us</span>
+				<!--<button type="button" class="btn btn-primary btn-lg" style="font-size: 20px">About Us</button>-->    <!-- Vipuls code -->	
+			</h2>
+
+			<div class="container-fluid abtPanel" >
+				<p id="about_us_para1">
+					Welcome to Success Property Consultants is a real estate investment firm specializing in purchasing, selling, and leasing residential and commercial properties. We evaluate the market, rental potential, and ROI (return on investment) before entering into a sales contract.
+				</p>
+				<p class="abtPoint">
+					Some of our technical analysis covers:
+				</p>
+				<ul class="abtPnt">
+					<li>Rent to mortgage (expense) ratio</li>
+					<li>When to sell property (exit out strategy)</li>
+					<li>Current value of property</li>
+					<li>Demographics</li>
+					<li>Market conditions</li>
+				</ul>	
+		 	</div>
+	 	</div>
 	</div>
-	
-	<div class="container-fluid" style="margin-top:20px;margin-left:30px;">
-		<p style="font-weight: bold;font-size: 20px;">
-			Some of our technical analysis covers:
-		</p>
-		<ul>
-			<li>Rent to mortgage (expense) ratio</li>
-			<li>When to sell property (exit out strategy)</li>
-			<li>Current value of property</li>
-			<li>Demographics</li>
-			<li>Market conditions</li>
-		</ul>	
- 	</div>
- 	</div>
-</div>
  	{{> ads}}
 </template>

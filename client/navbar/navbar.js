@@ -23,7 +23,7 @@ Template.mainNav.events({
 		//console.log(t.myval);
 		//Meteor.call("buy_helper_func",name);
 		var $this = $(event.target);		
-	},
+	},//,
 	'mouseenter .dropdown':function(event){
 		$(".dropdown-content").fadeIn(1500);
 	},
@@ -31,22 +31,28 @@ Template.mainNav.events({
 		$(".dropdown-content").fadeOut();
 	},
 	'mouseenter .contentMenu1':function(event){
-		$(".contentMenu1").css("border-bottom", "3px solid #000000");
+		// $(".contentMenu1").css("border-bottom", "3px solid #ffffff");
 		$(".contentMenu1").css("background-color", "#F39C12");
 	},
 	'mouseleave .contentMenu1':function(event){
-		$(".contentMenu1").css("border-bottom", "none");
-		$(".contentMenu1").css("background-color", "#ffffff");
+		// $(".contentMenu1").css("border-bottom", "none");
+		$(".contentMenu1").css("background-color", "#000000");
 	},
 	'mouseenter .contentMenu2':function(event){
-		$(".contentMenu2").css("border-bottom", "3px solid #000000");
+		// $(".contentMenu2").css("border-bottom", "3px solid #ffffff");
 		$(".contentMenu2").css("background-color", "#F39C12");
 	},
 	'mouseleave .contentMenu2':function(event){
-		$(".contentMenu2").css("border-bottom", "none");
-		$(".contentMenu2").css("background-color", "#ffffff");
+		// $(".contentMenu2").css("border-bottom", "none");
+		$(".contentMenu2").css("background-color", "#000000");
 	},
 	'click .navbar-toggle':function(event){
-		$("#navbarCollapse").css("background-color", "#F39C12");
-	}
+		$(".navbar-collapse").css("background-color", "#F39C12");
+	},
+	'click .cls':function(event){
+		 $(".navbar-collapse").collapse('hide');
+	},
+	// 'click .loginbtn':function(event){
+	// 	$(".accounts-dialog").effect( "bounce", {times:3}, 300 );
+	// }
 });

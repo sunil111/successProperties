@@ -11,9 +11,19 @@ Template.banner.onCreated(function(){
     var self= this;
     this.autorun( function() {
         self.subscribe('bannerdb');
+        self.subscribe('Images0')
         //self.subscribe('searchui');
     });
 });
+
+Template.banner.helpers({
+	'Img':function(){
+		// return Images.find();
+		var banner_content =  Images.find({},{sort:{uploadedAt:-1}},{limit: 1});
+    	return banner_content;
+	}
+})
+
 
 Template.banner.events({
 	'click #update_delete_option>.glyphicon-remove': function(e){

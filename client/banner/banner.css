@@ -52,6 +52,7 @@
 #myCarousel{	
 	margin-left: 0px;
 	padding: 0px;
+	height: 255px;
 }
 #img1,#img2,#img3{
 	width: 100%;

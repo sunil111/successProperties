@@ -1,0 +1,54 @@
+$colorBlack: #000000;
+$colorWhite: #ffffff;
+$colorGray: #888888;
+$Navcolor : #F39C12;
+
+div#ads_banner{
+	height: 150px;
+	width: 250px;
+	border:0px solid $colorBlack;
+	position: fixed;
+	bottom: 30px;
+	right: 0;
+	z-index: 99;
+	box-shadow: -2px -2px 5px $colorGray;
+	background-color: $colorWhite;
+	 animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s; 
+    -webkit-animation: fadeIn 2s; 
+    -o-animation: fadeIn 2s; 
+}
+p#hotdeal{
+	background-color: $colorWhite;
+	font-weight: bolder;
+	padding-left: 5px;
+	margin-bottom: 0px;
+	height: 30px;
+	border-bottom: 1px solid $colorBlack;
+}
+button#btn_ads_banner{
+	float: right;
+	height: 30px;
+	border-radius: 0px;
+}
+div#ads_banner > div#ad_details{
+	clear: right;
+	height: 120px;
+	width: 248px;
+	position: absolute;
+	bottom: 0px;
+}
+div#ad_details > img{	
+	height: 118px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+div#ad_details > div#ad_description{	
+	height: 100px;
+	width: 140px;
+	position: absolute;
+	top: 5px;
+	left: 105px;
+}
